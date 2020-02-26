@@ -11,6 +11,29 @@
 |
 */
 
+use App\image;
+
 Route::get('/', function () {
+    /*
+    $images = Image::All();
+    foreach($images as $image){
+        $i = 1;
+        echo $image->image_path."<br>";
+        echo $image->user->name."<br>";
+        
+        echo "Comentarios:";
+        foreach($image->comments as $comment){
+            echo $comment->content;
+        }
+
+        echo "<hr>";
+        $i++;
+    }
+    die();
+    */
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
