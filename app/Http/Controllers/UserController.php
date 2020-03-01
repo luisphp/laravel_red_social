@@ -8,9 +8,20 @@ use App\User;
 use Illuminate\Validation\Rule;
 use App\Rules\nickRepetido;
 use App\Rules\emailRepetido;
+use Facade\FlareClient\Http\Response;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -78,9 +89,12 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {   
-
+        //Conseguir el usuario identificado en este caso lo traemos del formulario
         $id_user = $request->input('id_user');
 
+        $user = \Auth::user();
+
+        //Validamos cada campo del formulario, en vista de que estoy usando campos ID customizados pues tambien estoy usando reglas de validacion customizadas como es el caso de nickRepetido e emailRepetido
         $validate = $this->validate($request, [
             
             'name' => ['required', 'string', 'max:255'],
@@ -89,16 +103,45 @@ class UserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', new emailRepetido]
         ]);
             
-        
-
-
+        //Seteamos en variables los datos del formulario    
         $name = $request->input('name');
         $surname = $request->input('surname');
         $nick = $request->input('nick');
         $email = $request->input('email');
 
-
+        //$user = auth()->user();
         
+        //Update a la base de datos
+         /*DB::table('users')
+              ->where('id_user', $id_user)
+              ->update(['name' => $name,'surname' => $surname,'nick' => $nick,'email' => $email] );
+            */
+            $user->name = $name;
+            $user->surname = $surname;    
+            $user->nick = $nick;
+            $user->email = $email;
+
+            //Subir imagen de avatar de usuario
+            $image_path = $request->file('image_path');
+            if($image_path){
+                $image_path_name = time().$image_path->getClientOriginalName();
+                Storage::disk('users')->put($image_path_name,File::get($image_path));
+                $user->image = $image_path_name;
+            }
+
+            $user->update();
+
+        //var_dump($user);
+        //die();
+
+        return redirect()->route('config')->with('message', 'Usuario actualizado correctamente');        
+    }
+
+    public function getImage($fileName){
+
+        $file  = Storage::disk('users')->get($fileName);
+
+        return response($file, 200);
     }
 
     /**

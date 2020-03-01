@@ -40,3 +40,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user/config', 'UserController@config')->name('config');
 Route::post('/user/edit', 'UserController@update')->name('update_user');
+Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.image');

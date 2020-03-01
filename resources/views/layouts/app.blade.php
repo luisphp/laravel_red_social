@@ -50,6 +50,12 @@
                                 </li>
                             @endif
                         @else
+                            <li>
+                                <div class="col-md-2" style="float: right; margin-right: -35px; border-radius: 900px; margin-top:5px;" >
+                                    @include('includes.avatar')
+                                </div>
+                                
+                            </li>
                              <li class="nav-item">
                                 <a href="" class="nav-link">Inicio</a>
                             </li>    
