@@ -12,7 +12,7 @@ use Facade\FlareClient\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
-
+use Symfony\Component\VarDumper\VarDumper;
 
 class UserController extends Controller
 {
@@ -55,7 +55,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

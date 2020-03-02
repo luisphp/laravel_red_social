@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -60,7 +61,7 @@
                                 <a href="" class="nav-link">Inicio</a>
                             </li>    
                             <li class="nav-item">    
-                                <a href="" class="nav-link">Subir Imagen</a>
+                                <a href="{{route('image.create')}}" class="nav-link">Subir Imagen</a>
                             </li>   
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

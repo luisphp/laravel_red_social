@@ -3,10 +3,6 @@
 @section('content')
 {{-- <h3>Configuración de usuario</h3> --}}
 
-
-
-<br>
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -109,9 +105,5 @@
         </div>
     </div>
 </div>
-
-@endsection
-
-@section('content2')
 
 @endsection

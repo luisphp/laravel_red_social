@@ -78,6 +78,11 @@
                     @endauth
                 </div>
             @endif
+            @if (session('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+            @endif            
 
             <div class="content">
                 <div class="title m-b-md">
@@ -85,14 +90,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{action('UserController@config')}}">Config</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{action('UserController@config')}}">User Config</a>
+                    <a href="{{route('image.create')}}">Image Create</a>
+                    <a href="{{route('home')}}">Images</a>
+                    <a href="https://github.com/luisphp">GitHub</a>
                 </div>
             </div>
         </div>

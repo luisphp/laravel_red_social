@@ -41,3 +41,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/config', 'UserController@config')->name('config');
 Route::post('/user/edit', 'UserController@update')->name('update_user');
 Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.image');
+
+Route::get('/image/create', 'ImageController@create')->name('image.create');
+Route::post('/image/store', 'ImageController@store')->name('image.store');
+Route::get('/image/get/{filename?}', 'ImageController@getImage')->name('image.get');
+Route::get('/image/show/{id}', 'ImageController@show')->name('image.show');
+Route::post('/comment/store', 'CommentController@store')->name('comment.store');
+Route::post('/comment/delete/{id}', 'CommentController@destroy')->name('comment.destroy');

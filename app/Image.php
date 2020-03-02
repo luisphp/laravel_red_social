@@ -12,8 +12,10 @@ class Image extends Model
 
     //Relación one to many - relacion uno a muchos
 
+    protected $fillable = ['fk_id_user', 'image_path', 'description', 'created_at', 'updated_at'];
+
     public function comments(){
-        return $this->hasMany('App\Comment', 'fk_id_image', 'id_image');
+        return $this->hasMany('App\Comment', 'fk_id_image', 'id_image')->orderBy('id_comment', 'desc');
     }
 
     //Relación one to many - relacion uno a muchos
@@ -25,6 +27,5 @@ class Image extends Model
     public function user(){
         return $this->belongsTo('App\User', 'fk_id_user', 'id_user');
     }
-
-
+   
 }
