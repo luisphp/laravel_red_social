@@ -25,7 +25,7 @@
 
 ### Captures
 
-<img src="imagenes-demo/Captura1.png" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura1.PNG" style="width: 400px;">
 <img src="imagenes-demo/Captura2.png" style="width: 400px;">
 <img src="imagenes-demo/Captura3.png" style="width: 400px;">
 <img src="imagenes-demo/Captura4.png" style="width: 400px;">
