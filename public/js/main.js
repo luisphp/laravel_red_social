@@ -90,6 +90,12 @@ window.addEventListener("load", function() {
     dislike();
 
 
+    //Buscador
+    $('#buscador').submit(function(e) {
+
+        $(this).attr('action', 'http://localhost/laravel_red_social/public/user/all/' + $("#buscador #search").val());
+
+    });
 
 
 });

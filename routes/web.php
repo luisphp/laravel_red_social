@@ -39,7 +39,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
  // Rutas de usuario
- Route::get('/user/all/{search?}', 'UserController@index')->name('user.index');
+Route::get('/user/all/{search?}', 'UserController@index')->name('user.index');
 Route::get('/user/config', 'UserController@config')->name('config');
 Route::post('/user/edit', 'UserController@update')->name('update_user');
 Route::get('/my_profile/{id}', 'UserController@profile')->name('myprofile');

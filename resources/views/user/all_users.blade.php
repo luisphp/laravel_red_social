@@ -17,6 +17,16 @@
             @endif
                 <h1>Gente</h1>
                 <br>
+            <form action="{{action('UserController@index')}}" method="GET" id="buscador">
+                <div class="col-md-12">
+                    <div class="row">
+                        <input type="text" id="search" placeholder="¿A quién buscas?" class="form-control col-md-8 float-left" style="margin-right: 15px;">
+                        <input type="submit" value="Buscar" class="btn btn-sm btn-success col-md-2 float-right">
+                    </div>
+                </div>
+                
+            </form>
+                <br>
             @foreach ($users as $user)
             <div class="data-user">
                 <div class="col-md-12" >

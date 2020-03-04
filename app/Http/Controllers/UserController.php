@@ -21,7 +21,24 @@ class UserController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
+    public function index($search = null){
+
+        if($search != null){
+            $all_users = User::where('nick', 'like', '%'.$search.'%')
+                            ->orWhere('name', 'like', '%'.$search.'%')
+                            ->orWhere('surname', 'like', '%'.$search.'%')
+                            ->orderBy('id_user', 'desc')
+                            ->paginate(5);
+        }else{
+
+            $all_users = User::orderBy('id_user', 'desc')
+                            ->paginate(5);
+        }
+        
+
+        return view('user.all_users')->with('users', $all_users);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -34,13 +51,6 @@ class UserController extends Controller
 
         return view('user.config');
     }
-
-    public function index($search){
-        $all_users = User::orderBy('id_user', 'desc')->paginate(5);
-
-        return view('user.all_users')->with('users', $all_users);
-    }
-
 
     /**
      * Show the form for creating a new resource.
