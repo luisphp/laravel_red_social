@@ -30,12 +30,17 @@ class UserController extends Controller
     public function config()
     {   
         //Proteger Vista
-
-
-
+            //Entra en acción el middlware que esta arriba
 
         return view('user.config');
     }
+
+    public function index($search){
+        $all_users = User::orderBy('id_user', 'desc')->paginate(5);
+
+        return view('user.all_users')->with('users', $all_users);
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -80,13 +85,7 @@ class UserController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //Actualizar usuario
     public function update(Request $request)
     {   
         //Conseguir el usuario identificado en este caso lo traemos del formulario
@@ -144,14 +143,12 @@ class UserController extends Controller
         return response($file, 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    //Perfil del usuario
+    public function profile($id)
     {
-        //
+        $user = User::find($id);
+
+        return view('user.my_profile')->with('user', $user);
     }
+
 }

@@ -11,6 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,7 +27,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{route('home') }}">
+                    
                     {{-- {{ config('app.name', 'Laravel') }} --}}
                     LaraPhoto
                 </a>
@@ -57,11 +61,14 @@
                                 </div>
                                 
                             </li>
-                             <li class="nav-item">
-                                <a href="" class="nav-link">Inicio</a>
-                            </li>    
+                            <li class="nav-item">
+                            <a href="{{route('mislikes')}}" class="nav-link">Favoritos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('user.index')}}" class="nav-link">Gente</a>
+                                </li>     
                             <li class="nav-item">    
-                                <a href="{{route('image.create')}}" class="nav-link">Subir Imagen</a>
+                                <a href="{{route('image.create')}}" class="nav-link" >Subir Imagen</a>
                             </li>   
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -70,10 +77,10 @@
                                 
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="">
+                                <a class="dropdown-item" href="{{action('UserController@profile',['id' => Auth::user()->id_user])}}">
                                         Mis datos
                                     </a>
-                                <a class="dropdown-item" href="{{ route('config') }}">
+                                    <a class="dropdown-item" href="{{ route('config') }}">
                                         Configuración
                                     </a>
                                     

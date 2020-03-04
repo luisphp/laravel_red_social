@@ -93,6 +93,7 @@
                     <a href="{{action('UserController@config')}}">User Config</a>
                     <a href="{{route('image.create')}}">Image Create</a>
                     <a href="{{route('home')}}">Images</a>
+                    <a href="{{route('user.index')}}">All Users</a>
                     <a href="https://github.com/luisphp">GitHub</a>
                 </div>
             </div>

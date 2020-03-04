@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Comment;
+use \Auth;
 
 class CommentController extends Controller
 {
@@ -50,10 +51,10 @@ class CommentController extends Controller
             $comment->content = $content;
             $comment->save();
 
-            return redirect('home')->with('message', 'Comentario guardado correctamente');
+            return back()->with('message', 'Comentario guardado correctamente');
 
         }else{
-            return redirect('home');
+            return back();
         }
 
     }
@@ -104,9 +105,9 @@ class CommentController extends Controller
         $user = \Auth::user();
 
         //Conseguir comentario a Eliminar
-        $comment = Comment::find($id)->get();
+        $comment = Comment::find($id);
 
-        if($user  && ($comment->user->id_user == $user->id_user || $comment->image->fk_id_user == $user->id_user)){
+        if($user  && ($comment->fk_id_user == $user->id_user ||  $comment->image->fk_id_user == $user->id_user)){
 
             $comment->delete();
 
