@@ -26,15 +26,15 @@
 ### Captures
 
 <img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura1.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captura2.png" style="width: 400px;">
-<img src="imagenes-demo/Captura3.png" style="width: 400px;">
-<img src="imagenes-demo/Captura4.png" style="width: 400px;">
-<img src="imagenes-demo/Captura5.png" style="width: 400px;">
-<img src="imagenes-demo/Captura6.png" style="width: 400px;">
-<img src="imagenes-demo/Captura7.png" style="width: 400px;">
-<img src="imagenes-demo/Captura8.png" style="width: 400px;">
-<img src="imagenes-demo/Captura9.png" style="width: 400px;">
-<img src="imagenes-demo/Captura10.png" style="width: 400px;">
-<img src="imagenes-demo/Captura11.png" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura2.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura3.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura4.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura5.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura6.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura7.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura8.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura9.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura10.PNG" style="width: 400px;">
+<img src="https://raw.githubusercontent.com/luisphp/laravel_red_social/master/imagenes-demo/Captura11.PNG" style="width: 400px;">
 
 
