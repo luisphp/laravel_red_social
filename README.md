@@ -25,16 +25,16 @@
 
 ### Captures
 
-<img src="imagenes-demo/Captue1.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue2.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue3.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue4.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue5.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue6.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue7.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue8.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue9.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue10.PNG" style="width: 400px;">
-<img src="imagenes-demo/Captue11.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture1.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture2.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture3.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture4.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture5.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture6.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture7.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture8.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture9.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture10.PNG" style="width: 400px;">
+<img src="imagenes-demo/Capture11.PNG" style="width: 400px;">
 
 
